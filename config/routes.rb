@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   post '/artists/new', to: 'artists#create'
   patch '/artists/:id', to: 'artists#update'
 
-  resources :songs, only: [:new, :edit]
+  resources :songs, only: [:index, :new, :edit]
   get '/songs/:id', to: 'songs#show', as: 'song'
   post '/songs/new', to: 'songs#create'
   patch '/songs/:id', to: 'songs#update'
