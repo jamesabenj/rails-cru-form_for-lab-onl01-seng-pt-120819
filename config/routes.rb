@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :songs, only: [:new, :create, :edit]
   get '/songs/:id', to: 'songs#show', as: 'song'
-  post '/songs/new' to: 'songs#create'
+  post '/songs/new', to: 'songs#create'
   patch '/songs/:id', to: 'songs#update'
 
   resources :genres, only: [:new, :edit]
