@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :artists, only: [:index, :new, :edit]
+  resources :artists, only: [:new, :edit]
   get '/artists/:id', to: 'artists#show', as: 'artist'
   post '/artists/new', to: 'artists#create'
   patch '/artists/:id', to: 'artists#update'
